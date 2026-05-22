@@ -1,0 +1,18 @@
+.admin-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.admin-grid div {
+  background: rgba(255,255,255,0.09);
+  border-radius: 24px;
+  padding: 24px;
+  font-weight: 800;
+}
+
+@media (min-width: 760px) {
+  .admin-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

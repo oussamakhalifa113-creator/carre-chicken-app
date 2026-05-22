@@ -1,0 +1,12 @@
+.rotating-text-wrap {
+  display: inline-flex;
+  overflow: hidden;
+  vertical-align: bottom;
+  color: #ff7a1a;
+  font-weight: 950;
+}
+
+.rotating-text {
+  display: inline-block;
+  white-space: nowrap;
+}

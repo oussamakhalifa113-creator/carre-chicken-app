@@ -1,0 +1,72 @@
+.confirmation-page {
+  display: grid;
+  place-items: center;
+  padding-bottom: 120px;
+}
+
+.ticket {
+  width: min(92vw, 520px);
+  padding: 26px;
+  border-radius: 32px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.13);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.35);
+}
+
+.ticket-brand {
+  color: #ff7a1a;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+}
+
+.ticket h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 7vw, 3.6rem);
+  line-height: 0.95;
+}
+
+.order-number {
+  margin-bottom: 22px;
+  padding: 14px;
+  border-radius: 20px;
+  background: rgba(255,122,26,0.16);
+  color: #ffb06b;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 950;
+}
+
+.ticket-row,
+.ticket-items div,
+.ticket-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.ticket-row span,
+.ticket-items span,
+.ticket-total span {
+  color: rgba(255,255,255,0.68);
+}
+
+.ticket-total {
+  border-bottom: none;
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.new-order-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+  padding: 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff8a1c, #ff5a00);
+  font-weight: 950;
+}
