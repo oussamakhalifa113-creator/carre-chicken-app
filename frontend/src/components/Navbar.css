@@ -161,3 +161,44 @@
     height: 21px;
   }
 }
+
+.logout-nav-btn {
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.logout-nav-btn:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-1px);
+}
+
+.logout-nav-btn:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 760px) {
+  .logout-nav-btn {
+    flex: 1;
+    height: 58px;
+    padding: 0;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .logout-nav-btn span {
+    font-size: 0.68rem;
+  }
+}

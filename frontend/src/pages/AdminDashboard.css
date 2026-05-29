@@ -16,3 +16,41 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.admin-orders {
+  margin-top: 28px;
+  display: grid;
+  gap: 16px;
+}
+
+.admin-order-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-order-card h2 {
+  color: #ff7a1a;
+  margin: 0 0 8px;
+}
+
+.admin-order-card p {
+  margin: 4px 0;
+  color: rgba(255,255,255,0.75);
+}
+
+.admin-order-card strong {
+  color: white;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 720px) {
+  .admin-order-card {
+    grid-template-columns: 1fr;
+  }
+}

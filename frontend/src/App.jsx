@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import ShapeGrid from "./components/ShapeGrid";
 import Navbar from "./components/Navbar";
 
@@ -10,7 +10,12 @@ import Confirmation from "./pages/Confirmation";
 import Login from "./pages/Login";
 import EmployeeDashboard from "./pages/EmployeeDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
-import StripeSuccess from "./pages/StripeSuccess";
+
+function ProtectedAdmin({ children }) {
+  const isAdmin = localStorage.getItem("admin-auth") === "true";
+  return isAdmin ? children : <Navigate to="/login" replace />;
+}
+
 function App() {
   return (
     <>
@@ -24,9 +29,24 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/employee" element={<EmployeeDashboard />} />
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/stripe-success" element={<StripeSuccess />} />
+
+        <Route
+          path="/employee"
+          element={
+            <ProtectedAdmin>
+              <EmployeeDashboard />
+            </ProtectedAdmin>
+          }
+        />
+
+        <Route
+          path="/admin"
+          element={
+            <ProtectedAdmin>
+              <AdminDashboard />
+            </ProtectedAdmin>
+          }
+        />
       </Routes>
     </>
   );

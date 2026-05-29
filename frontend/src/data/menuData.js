@@ -2,10 +2,10 @@ export const menuData = [
   {
     category: "Menus",
     items: [
-      { id: 1, name: "Menu L", price: 12.95, description: "Burger ou wrap + tenders/wings + frites + boisson.", image: "/images/menu-l.jpg", requireSpiceChoice: true },
-      { id: 2, name: "Menu XL", price: 14.95, description: "Grand burger + tenders/wings + frites + boisson.", image: "/images/menu-xl.jpg", requireSpiceChoice: true },
-      { id: 3, name: "Menu Étudiant", price: 6.95, description: "Burger ou wrap + frites + boisson.", image: "/images/menu-etudiant.jpg" },
-      { id: 13, name: "Menu Poussin", price: 4.95, description: "Petit Frais ou Chick'n Cheese ou Wrap Jr + Ziggy fries + eau ou Capri-Sun.", image: "/images/menu-poussin.jpg" }
+      { id: 1, name: "Menu L", price: 12.95, description: "Burger ou wrap + tenders/wings + frites + boisson incluse.", image: "/images/menu-l.jpg", requireSpiceChoice: true },
+      { id: 2, name: "Menu XL", price: 14.95, description: "Grand burger + tenders/wings + frites + boisson incluse.", image: "/images/menu-xl.jpg", requireSpiceChoice: true },
+      { id: 3, name: "Menu Étudiant", price: 6.95, description: "Burger ou wrap + frites + boisson incluse.", image: "/images/menu-etudiant.jpg" },
+      { id: 13, name: "Menu Poussin", price: 4.95, description: "Petit burger ou wrap junior + Ziggy fries + boisson enfant.", image: "/images/menu-poussin.jpg" }
     ]
   },
   {
@@ -40,6 +40,13 @@ export const menuData = [
     items: [
       { id: 11, name: "Tenders x3", price: 4.5, description: "3 tenders croustillants maison.", image: "/images/tenders.jpg", requireSpiceChoice: true },
       { id: 12, name: "Wings x6", price: 6.5, description: "6 wings marinées et croustillantes.", image: "/images/wings.jpg", requireSpiceChoice: true }
+    ]
+  },
+  {
+    category: "Boissons",
+    items: [
+      { id: 19, name: "Eau", price: 1.5, description: "Bouteille d'eau fraîche.", image: "/images/eau.jpg" },
+      { id: 20, name: "Boisson", price: 2.5, description: "Boisson fraîche au choix.", image: "/images/boisson.jpg" }
     ]
   }
 ];

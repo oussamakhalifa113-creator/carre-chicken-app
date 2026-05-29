@@ -1,8 +1,8 @@
-﻿import "./AdminLogin.css";
+import "./AdminLogin.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function AdminLogin() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,9 +10,12 @@ function Login() {
   const login = (e) => {
     e.preventDefault();
 
-    if (email === "admin@carrechicken.fr" && password === "CarreChicken2026!") {
+    if (
+      email === "admin@carrechicken.fr" &&
+      password === "CarreChicken2026!"
+    ) {
       localStorage.setItem("admin-auth", "true");
-      navigate("/employee");
+      navigate("/admin");
     } else {
       alert("Email ou mot de passe incorrect.");
     }
@@ -44,4 +47,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default AdminLogin;

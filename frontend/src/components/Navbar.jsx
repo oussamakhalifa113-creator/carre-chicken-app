@@ -1,11 +1,18 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Home, Utensils, ShoppingBag, UserRound } from "lucide-react";
+import { Home, Utensils, ShoppingBag, UserRound, LogOut } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import "./Navbar.css";
 
 function Navbar() {
   const { cartCount } = useCart();
+  const navigate = useNavigate();
+  const isAdmin = localStorage.getItem("admin-auth") === "true";
+
+  const logout = () => {
+    localStorage.removeItem("admin-auth");
+    navigate("/login");
+  };
 
   const links = [
     { to: "/", label: "Accueil", icon: <Home size={20} /> },
@@ -39,11 +46,7 @@ function Navbar() {
                   <motion.span
                     className="nav-active-bg"
                     layoutId="navbar-active-pill"
-                    transition={{
-                      type: "spring",
-                      stiffness: 420,
-                      damping: 32,
-                    }}
+                    transition={{ type: "spring", stiffness: 420, damping: 32 }}
                   />
                 )}
 
@@ -61,6 +64,13 @@ function Navbar() {
             )}
           </NavLink>
         ))}
+
+        {isAdmin && (
+          <button className="logout-nav-btn" onClick={logout}>
+            <LogOut size={20} />
+            <span>Déconnexion</span>
+          </button>
+        )}
       </nav>
     </header>
   );
